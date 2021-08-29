@@ -1,0 +1,2 @@
+# zsebszoveg
+beugró zsebszöveg játék
