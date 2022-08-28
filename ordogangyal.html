@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beugró</title>
+ <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+<H1>Beugró: Ördög és angyal</H2>
+<hr>
+<div class="feladat">
+<p><b>Szabály:</b> A játékosok közül kettő, az ördög és az angyal próbálja rossz illetve jó irányba terelni egy harmadik cselekedeteit egy adott helyzetben kimondva annak gondolatait. A harmadik játékos feladata, hogy a két énjének vitája szerint adja elő szerepét.</p>
+</div>
+<div class="szekcio">
+<input type="button" onclick="szitu()" value="Szituáció">
+<p class="label" id="szituacioszoveg">Példaszöveg</p>
+<ul>
+    <p id="li1"></p>
+    <p id="li2"></p>
+    
+</ul>
+</div>
+
+</body>
+<script>
+    function szitu() {
+        let fullszoveg="Idősödő színészlegendát egy puffadás gátló gyógyszer reklámjára akarják szerződtetni.$Ördög: Vállald el, úgyis egyre kevesebb helyre hívnak$Angyal: Ne tedd tönkre, amit eddig elértél!;Vállalati ünnepségen összekeverik a borítékokat, és egy irodista kapja a vezérigazgatói prémiumot.$Ördög: Tedd el a pénzt!$Angyal: Szólj, mert úgyis kiderül.;Főnök, és beosztott utazik a liftben egy sajtótájékoztatóra.. A főnök nagyon letolja a beosztottat, majd orrot fúj, és egy papír zsebkendő-darab ragad az orrára. A beosztott szóljon neki, vagy ne?$Ördög: Ne szólj, legyen csak nevetséges a fotósok előtt.$Angyal: Ha most szólsz neki, korrekten viselkedsz, talán még előnyhöz is jutsz.;Egy étteremben valaki fizetett, és mikor a pincér visszahozza a visszajárót, a vendég észreveszi, hogy ötezres helyett tízezresből adtak neki vissza.$Ördög: ne szólj neki, így is minden nagyon drága volt.$Angyal: szólj, mert az étteremben hiány keletkezik!;Egy utas a taxi hátsó ülésén egy CD-t talál, és egy rövid levelet: vidd el ezt az anyagot erre a címre, és kapsz 6,5 milliót.$Ördög: Menj oda, és vedd fel a pénzt!$Angyal: Ne menj oda, mert bajba kerülhetsz!;Egy fiatal zenész mutatja meg példaképének az első számát. A híres zenészlegenda döbbenten áll a demó végénél, és nem tudja mit mondjon.$Ördög: Néhány keresetlen mondattal végleg vedd el a kedvét a pályától!$Angyal: Legyél vele udvarias, hisz még kinőheti magát valamivé a srác!;Egy Barátod túl sokat iszik, és ez már kezd az egészsége rovására menni.$Ördög: Ha piás, nagyon jókat lehet ökörködni vele!$Angyal: Súlyos következményei lesznek, ha így folytatja."
+        let sorok = fullszoveg.split(";");
+        var randsor = Math.floor(Math.random() * sorok.length);
+        let szitu = sorok[randsor];
+        let reszek = szitu.split("$");
+        document.getElementById("szituacioszoveg").innerText = reszek[0];
+        document.getElementById("li1").innerText = reszek[1];
+        document.getElementById("li2").innerText = reszek[2];
+        
+
+    }
+
+    
+
+</script>
+
+<a href="index.html"><input type="button"  value="Főoldal"></a>
+</html>

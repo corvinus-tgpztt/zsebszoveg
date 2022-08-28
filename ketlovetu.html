@@ -9,11 +9,40 @@
 </head>
 <body>
     
-<H1>Beugró: Zsebszöveg</H2>
+<H1>Beugró: Kétlövetű</H2>
 <hr>
 <div class="feladat">
-    <p><b>Szabály:</b> A négy játékos négy cetli közül választ egyet-egyet, amelyekben az 1-2-3-4 számok szerepelnek. Amelyik számot húzták, csak pontosan annyi szóból álló mondatokat mondhatnak ki a jelenet során.</p>
-    </div>
+<p><b>Szabály:</b> A játékban két játékos csak két-két adott mondatot mondhat a meghatározott szituáció során, míg a harmadik, szabad kezet kapó színésznek kell értelmet adnia a beszélgetésnek.</p>
+</div>
+<div class="szekcio">
+<input type="button" onclick="szitu()" value="Szituáció">
+<p class="label" id="szituacioszoveg">Példaszöveg</p>
+</div>
+<div class="szekcio">
+    <input type="button" onclick="szam()" value="Karakter">
+    <p class="label" id="szam">Karakter</p>
+</div>
+<script>
+    function szitu() {
+        let fullszoveg="2 öltönyös, rosszkinézetű ember állít be egy házaspárhoz, mondván: a férj nemzetközi bűnöző, és a házukat addig lezárják, amíg meg nem érkezik az erősítés. A házaspár azonban holtig állítja, hogy ez valami félreértés lehet.;Egy bankrablás során a bankrabló kap egy zsák pénzt, de minden bankjegy szakadt, ezért reklamál. (bankrabló-1, pénztáros-2,biztonságiőr-3,ügyfél-4);Négy hajótörött egy lakatlan szigeten azon tanakodik, hogyan szabaduljanak meg szorult helyzetükből.;Egy pár, egy másik baráti párnál vacsorázik, amikor egyszer csak közlik, miért is jöttek igazán.;Egy rendőrfőnök, és egy pszichológus behívatja balhés rendőr-párost, miután azok akciója után, a város egész főterét újra kellett építeni;Egy vonatfülkében az utasok nagyon nem jönnek ki egymással. Az egyikük fázók, a másik azonban lehúzná az ablakot, a 3. aludni szeretne, míg a 4. zenét hallgatna.;4 egymást nem ismerő gengsztert bízik meg egy ismeretlen, hogy raboljanak ki egy bankot. Mind a 4 arról próbálja meggyőzni a többit, hogy ő a legalkalmasabb főnöknek.;Egy jégtáncos pár női tagja egy másik férfival szeretné folytatni a pályafutását, ezt a hírt most közlik a nő régi társával, és az edzővel.;Egy ember autója alatt beszakadt az aszfalt, a kocsinak csak az orra látszik ki. A tulaj az önkormányzat egyik emberéve, egy rendőrrel, és egy bámészkodóval beszélget.;Két rendőr igazoltat két, nagy táskát cipelő alakot. Szeretnék tudni, mi van a bőröndben, de a két figura nem akarja megmutatni. A rendőrök egyre határozottabbak, de ők mag nem akarják kinyitni, mert rendőrvicceket tartalmazó könyvekkel ügynökölnek, és tartanak tőle, hogy a rendőrök rossz néven vennék.;Két piti maffiózó érkezik egy kínai étkezdébe, és közlik, holnaptól védelmi pénzt szednek. A két kiszolgáló azonban félreértik őket, és azt hiszik ebédelni jöttek.;Rallyversenyzők eltévedtek, és véletlenül behajtanak egy parasztház udvarára. Az ott álló idős néni marasztalná őket vacsorára, de a férje csak inni szeretne. A navigátor igazából maradna, de a pilóta ideges, mert vissza szeretne térni a versenybe.;Hárman ülnek be 1 taxiba. Mindegyik azt szeretné, ha a sofőr őt tenné ki először. A taxisnak végül is mindegy."
+        let sorok = fullszoveg.split(";");
+        var randsor = Math.floor(Math.random() * sorok.length);
+        document.getElementById("szituacioszoveg").innerText = sorok[randsor];
+    }
+
+    function szam() {
+        let fullszoveg="1;2;3;4"
+        let sorok = fullszoveg.split(";");
+        var randsor = Math.floor(Math.random() * sorok.length);
+        document.getElementById("szam").innerText = sorok[randsor];
+    }
+
+    
+
+</script>
+
+<a href="index.html"><input type="button"  value="Főoldal"></a>
+</html>
 <div class="szekcio">
 <input type="button" onclick="szitu()" value="Szituáció">
 <p class="label" id="szituacioszoveg">Példaszöveg</p>

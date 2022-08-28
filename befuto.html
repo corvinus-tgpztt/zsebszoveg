@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beugró</title>
+ <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+<H1>Beugró: Befutó</H2>
+<hr>
+<div class="feladat">
+<p><b>Szabály:</b> A négy színészből három különböző hatásokra valamilyen, normálistól eltérő tevékenységbe. A negyedik színész(akit a tevékenységkiosztások alatt kiküldünk a teremből) feladata kitalálni a kiváltó okokat és a következményt. (a zárójelekbe a játékos nevét írhatod, így játék közben könnyebb megjegyezni ki mit reagál)</p>
+</div>
+<div class="szekcio">
+<input type="button" onclick="szitu()" value="Szituáció">
+<p class="label" id="szituacioszoveg">Példaszöveg</p>
+<ul>
+    <li id="li1"></li>
+    <li id="li2"></li>
+    <li id="li3"></li>
+</ul>
+</div>
+
+</body>
+<script>
+    function szitu() {
+        let fullszoveg="Egy arisztokrata magához hívatja gyerekeit, hogy közölje velük: egyikükre sem hagyja vagyonát, inkább egy kutyamenhely kapja meg. A gyerekek különböző féleképpen reagálnak.$GYEREK1 (__________): Pénzösszeg hallatán guggol egyet.$GYEREK2 (__________): Megfogja a mellette levő kezét, ha az apja kiejti a nem szót.$GYEREK3 (__________): Torkát köszörüli, ha egy nevet hall.;Egy mániákus íróhoz érkezik 3 barátja, hogy közöljék vele: abba kéne hagynia az írást.$BARÁT1(____________): Ha elhangzik a könyv szó, kuncogni kezd$BARÁT2(____________): Ha hozzáér valaki, lehajtja a fejét, és elszégyelli magát.$BARÁT3(____________): Ha az írótól kérdeznek valamit, ő géppuskával lövöldözni kezd.;A tornatanár is pályázik az igazgatói posztra, és 3 kollégáját bizonygatja arról, hogy ő az ideális ember erre a feladatra.$TANÁR1(___________): Vállon veregeti a tornatanárt, ha elhangzik egy tantárgy neve.$TANÁR2(___________):  Vállon veregeti saját magát, ha bárki lehajol$TANÁR3(___________): Bólogatni kezd, ha kérdeznek tőle.;Egy edző tárgyalja meg a csapatával, mi legyen a taktika a következő meccsen.$JÁTÉKOS1(___________): Ha elhangzik az „ellenség/ellenfél” szó, pacsit kér az egyik játékostól.$JÁTÉKOS2(___________): Ha valaki hozzáér az edzőhöz, ő hangosan köszörüli a torkát.$JÁTÉKOS3(___________): Ha valaki S betűvel kezdődő szót mond, tüsszent egyet.;15. érettségi találkozó$EMBER1(___________): Ha valaki kérdést intéz hozzá, akkor annak kerüli a tekintetét.$EMBER2(___________): Ha valaki egy nevet említ, elneveti magát.$EMBER3(___________): Ha valaki vakarózik, azt mondja: „Bezzeg a mi időnkben…”;Karácsonyi vacsora, ahová a házigazda a nagyon rég nem látott rokonokat is meghívja magához.$ROKON1(____________): Városneveket kezd sorolni, ha valaki kérdez tőle$ROKON2(____________): Fázósan didereg, vacog, ha valaki kimondja a „család” szót$ROKON3(____________): Becsípődik a dereka, ha hozzáérnek."
+        let sorok = fullszoveg.split(";");
+        var randsor = Math.floor(Math.random() * sorok.length);
+        let szitu = sorok[randsor];
+        let reszek = szitu.split("$");
+        document.getElementById("szituacioszoveg").innerText = reszek[0];
+        document.getElementById("li1").innerText = reszek[1];
+        document.getElementById("li2").innerText = reszek[2];
+        document.getElementById("li3").innerText = reszek[3];
+
+    }
+
+    
+
+</script>
+
+<a href="index.html"><input type="button"  value="Főoldal"></a>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beugró</title>
+ <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+<H1>Beugró: Váltóláz</H2>
+<hr>
+<div class="feladat">
+    <p><b>Szabály:</b> A színészeket az adott szituációban érzelmekkel, jellemvonásokkal, tulajdonságokkal instruálom, melyek alapján kell az eljátszott szerepüket tovább alakítaniuk.</p>
+    </div>
+<div class="szekcio">
+<input type="button" onclick="szitu()" value="Szituáció">
+<p class="label" id="szituacioszoveg">Példaszöveg</p>
+</div>
+<div class="szekcio">
+<input type="button" onclick="szoveg()" value="Zsebszöveg">
+<p class="label" id="zsebszovegszoveg">Példaszöveg</p>
+</div>
+</body>
+<script>
+    function szitu() {
+        let fullszoveg="Egy híres humorista felesége válni akar. A férfi azt mondja, hogy mivel ő a múzsája, ezért ezt nem teheti vele.;Piaci árusnál uborkára alkuszik a vevő. Az árus nem akar engedni az árból, de a vevő szerint kellene, hiszen ezért vannak piacon.;Az óvó néni próbálja rávenni a gyereket, hogy másszon le a mászókáról, és menjen be aludni.;Egy tóparton az egyik horgász felelősségre vonja a másikat, hogy ez az ő horgászhelye, mert több napi etetéssel szoktatta ide a halakat, szóval amit a másik fogott, annak a fele őt illeti.;Egy erősen ittas nő szilveszterkor megfogadja, hogy többet nem iszik alkoholt. Azonban férje mikor felébred, a nő már javában issza a 6. sörét.;Egy ember azzal gyanúsítja barátját/barátnőjét, hogy mostanában feltűnően úgy viselkedik mint ő.;Valaki azzal gyanúsítja a másikat, hogy mikor dartsoznak, a barát mindig akkor köhög, mikor ő dobni készül.;Egy férfi egy nap ital, és női parfüm szagúan érkezik haza. Felesége kérdőre vonja.;A légtornász rá szeretné venni a tériszonyos bohócot, hogy ugorjon be partnere helyett az esti, védő háló nélküli magánszámba.;Miután a család egyetlen gyereke mindenből megbukott, az apa testi fenyítéssel büntetné a gyereket, míg az anya jutalmazással bírná őt tanulásra.;A színdarab írót megvádolja a felesége, hogy a legújabb darabban róla mintázta a negatív női főhőst. Az író azonban tagadja, hogy a szereplő jellemének bármi köze lehetne a feleségéhez.;A vakbélműtét után az orvos közli a beteggel, hogy újra kell őt operálnia, mert bent maradt az arany karórája.;A feleség hazaért az üzleti útról és látja, hogy férje ugyan elvégezte a tervezett átalakításokat, de teljesen máskipp, mint ahogyan azt megbeszélték. Az ajtók rosszhelyen vannak, a konyhába a gardróbon keresztül lehet bejutni, stb…"
+        let sorok = fullszoveg.split(";");
+        var randsor = Math.floor(Math.random() * sorok.length);
+        document.getElementById("szituacioszoveg").innerText = sorok[randsor];
+    }
+
+    function szoveg() {
+        let fullszoveg="Túlságosan artikuláló;álmos;vicces kedvű;orosz maffiózó;túlságosan gesztikulál; skizofrén;gonosz;színpadias;szájhős;beletörődő;lelkesítő;gyerekes;romantikus;hiperaktív;zártszájú;népies;szabadságharcos;éhes;álmos;nagylelkű;másnapos;pánikbeteg;utánzó;ijedt;magyarázkodó;visszakérdező;didergő;kishitű;kíváncsiskodó;tréfálkozó;szlengben beszélő;ijedős;kalandvágyó;nyugodt;figyelmetlen;mimóza;pimasz;laza;boldog;parancsoló;makacs;eleven;fukar;szerény;optimista;magabiztos;normális;lírai;kialvatlan;dalolászó;keleti harcművész;rémült;szomorú;gúnyos;bizonytalan;neveletlen;ostoba;kimért;óvatos;felelőtlen;hajthatatlan;bizonytalan;megnémult;számon kérő;fenyegetőző;rémeket látó;arisztokratikus;legyengült;rekedt;táncos;kíváncsi;felpörgött;türelmetlen;katonás;ziháló;unott;könyörgő;szánakozó;lassú;búskomor;hiszékeny;zord;lökdösődő;suttogó;feledékeny;dadogó;ilyesztő;utasítgató;cinikus;náthás;nagyothalló"
+        let sorok = fullszoveg.split(";");
+        var randsor = Math.floor(Math.random() * sorok.length);
+        document.getElementById("zsebszovegszoveg").innerText = sorok[randsor];
+    
+    }
+
+</script>
+
+<a href="index.html"><input type="button"  value="Főoldal"></a>
+</html>

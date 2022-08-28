@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beugró</title>
+ <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+<H1>Beugró: Elfordítás</H2>
+<hr>
+<div class="feladat">
+<p><b>Szabály:</b>Az egyik színész egy idegen nyelven, erősen gesztikulálva, mutogatva elkezd egy meghatározott témájú előadást. A másik e nyelv és a téma ismerete nélkül kell tolmácsolja a prezentációt.</p>
+</div>
+<div class="szekcio">
+<input type="button" onclick="szitu()" value="Szituáció">
+<p class="label" id="szituacioszoveg">Példaszöveg</p>
+</div>
+
+</body>
+<script>
+    function szitu() {
+        let fullszoveg="Egy francia képviselő kiáll az európai parlament elé, és beszédet mond arról, hogy az EU-ban csak francia sajtot lehessen enni, mert egy európai polgár mindenből a legjobbat érdemli, és más ország sajtjai szerinte ehetetlenek.;Egy spanyolul beszélő idegenvezető magyarázza a dzsungelben magyar turistáknak, hogy az állatok nem veszélyesek.;Francia mentőorvos elmagyarázza egy konferencián, hogy miféle veszélyeket rejthet egy látszólag ártalmatlan hobbi: a bélyeggyűjtés. Megmutatja azt is, mit kell tenni, ha valaki letüdőzött egy bélyeget.;Egy orosz feltaláló mutatja be legújabb találmányát: egy olyan kabátot, ami mozgás hatására energiát termel, és vagy fűti magát, vagy konnektorként üzemel.;Német feltaláló ismerteti legújabb találmányát: a sörtartályos futball néző fotelt.;Orosz feltaláló bemutatja, miként működik a katapult a helikoptereken.;Egy japán háziasszony próbál világméretű felkelést szítani, hogy a gyerekek ne nézzenek erőszakos filmeket.;Egy spanyol ex-torreádor tart arról előadást, mekkora siker az általa nyitott torreádor étterem, ahol torreádorok – munkájukhoz jellegzetes mozdulatokkal – szolgálnak fel.;Egy finn vadász elmeséli hihetetlen kalandját: amikor egy  rátámadó rénszarvasbikát nem tudott lelőni, és egy gyerekmesével nyugtatta meg az állatot annyira, hogy a bika végül el is aludt.;Francia állatvédő népszerűsíti a szilveszteri petárdákat és trombitákat, amik nem kergetik őrületbe a háziállatokat.;Egy német kutató bejelenti a publikum előtt, hogy immár a leg ősibb foglalkozást is át tudják venni a robotok: a portáskodást. A gépek nem csak szerelnek, és takarítanak, de a rosszgyerekekre is rápirítanak, és bájolognak az öreg nénikkel.;Egy fiatal olasz tudós bejelenti, hogy mostantól a síléceket nem kell porosodni hagyni nyáron sem. Legújabb találmánya, a hó-láda ugyanis képes akár egy évig is megőrizni a havat, így csak ki kell borítani egy csúszkálásra alkalmas lejtőn.;Egy orosz vadász a publikum előtt meséli el hogyan találkozott a jetivel.;Egy olasz építész magyarázza a Budapesti Vidámpark fejeseinek, hogy milyen új játékokat javasolna a parkba.;Egy japán filmszínész meséli el a gyerekeknek legújabb karate-filmje történetét.;Egy amerikai súlyemelő meséli el milyen út vezetett ehhez az erőhöz.;Egy sámán fejti ki nézeteit ez amerikai kormány előtt Magyarország megtámadására rejtett olajkészleteiért. Szerinte a háborúnál jobb megoldás lenne, ha megátkoznák az országot.;Egy őrült meséli a sárgaház orvosainak, hogyan rabolták el minap az űrlények, és változtatták meg anyanyelvét Németre."
+        let sorok = fullszoveg.split(";");
+        var randsor = Math.floor(Math.random() * sorok.length);
+        document.getElementById("szituacioszoveg").innerText = sorok[randsor];
+    }
+
+
+
+</script>
+
+<a href="index.html"><input type="button"  value="Főoldal"></a>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beugró</title>
+ <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+<H1>Beugró: Narráció</H2>
+<hr>
+<div class="feladat">
+<p><b>Szabály:</b>Két játékos narrátora és szereplője is az adott szituációnak, így az elmondottakkal befolyásolni tudják társuk cselekvéseit is.</p>
+</div>
+<div class="szekcio">
+<input type="button" onclick="szitu()" value="Szituáció">
+<p class="label" id="szituacioszoveg">Példaszöveg</p>
+</div>
+
+</body>
+<script>
+    function szitu() {
+        let fullszoveg="Két tudósító az utolsó pillanatban érkezik a közvetítő állomásra, ahol más csak egyetlen egy szabad hely van;Két aranyásó egyszerre döbben rá, hogy a szitában, mait jelenleg egyszerre fognak, hatalmas aranyfogás van.;Az év fociszája díj átadón, a két ősi rivális megosztott díjat vesz át, és mindent megtesznek azért, hogy a másik leégjen a színpadon;Két horgász ugyan azt a rekordméretű halat akasztja meg. Nem tudják eldönteni, melyikük húzza partra.;Egy kigyúrt biztonsági őr nyit be oda, ahol a Mona Lisa-t őrzik. Egy rabló éppen a kijárat felé igyekezett, amit most az őr elállt. Egyikük sem szeretne erőszakhoz folyamodni.;Futóverseny;Az osztály egy csúnyácskább fiúja elhatározza: randira hívja a legszebb lányt. A lány sejti mire készül, és el szeretné kerülni a helyzetet, hogy ne sértse meg a fiút.;Két rivális tévést arra kényszerít az élet, hogy egyszer egymás mellett állva vezessék a TV-műsort. Mindketten szeretnék, ha másik nevetségessé válna a nézők előtt.;Játékboltban tömegek rohamoznak meg egy polcot, melyen már csak egyetlen egy darab van az év játékából. Két szülő megpróbálja megkaparintani az áhított játékszert.;A vadnyugaton két párbajhős készülnek mindent eldöntő viadalukra. Azonban egyikük sem hozott lőszert, és mind a ketten el akarták kerülni, hogy ez kiderüljön.;Akadályfutás;Egy gyorsétteremben egyszerre pillant meg két vendég egy pénztárcát. Megpróbálnak a másik előtt odajutni, de úgy, hogy a közönség figyelmét ne hívják fel a tárcára.;A reptérben körbe-körbeforgó futószalagon egy fekete bőrönd utazik. Két utas egyszerre nyúl érte. Mind a ketten meg vannak róla győződve hogy a sajátjuk, az egyik ki is nyitná, de a másik nem szeretné, mert ha az övé, akkor tele van pakolva lőszerekkel, és nem szeretne lebukni."
+        let sorok = fullszoveg.split(";");
+        var randsor = Math.floor(Math.random() * sorok.length);
+        document.getElementById("szituacioszoveg").innerText = sorok[randsor];
+    }
+
+
+
+</script>
+
+<a href="index.html"><input type="button"  value="Főoldal"></a>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beugró</title>
+ <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+<H1>Beugró: Lassítás</H2>
+<hr>
+<div class="feladat">
+<p><b>Szabály:</b> Meg van adva egy szituáció, amit elő kell adni lassítva. Nagyon kell ügyelni az arckifejezésekre, és a mozdulatokra. A végén egy nagy csattanót szoktak még belerakni. Úgy is játszható, hogy a játékos(ok) ha kell, előbb valós időben, majd lassítva is előadnak egy cselekvést; a lassítás során új mozzanatokat csempészve bele.
+    Játszható olyan formában is, hogy a nézők nem tudják előre, hogy mi maga a szituáció és ki kell találják.
+    </p>
+</div>
+<div class="szekcio">
+    <input type="button" onclick="szitu()" value="Szituáció">
+    <p class="label" id="szituacioszoveg">Példaszöveg</p>
+    <p id="nev1"></p>
+    <ul>
+        <li id="li1"></li>
+        <li id="li2"></li>
+       
+    </ul>
+    <p id="nev2"></p>
+    <ul>
+        <li id="li3"></li>
+        <li id="li4"></li>
+
+    </ul>
+    </div>
+    
+    </body>
+    <script>
+        function szitu() {
+            let fullszoveg="A király magához hívatja két tanácsosát, hogy mondják el a véleményüket arról, hogy indítson-e háborút a szomszéd királyság ellen, mivel azok elrabolták a feleségét.$TANÁCSOS1:$Nem tanácsos…$Ez nem szép öntől felség!$TANÁCSOS2:$Én félek…$Több is veszett mohácsnál!;Egy esküvő szervező a legcifrább dolgokra akarja rábeszélni a párt, mondván: az ma más snassz, aki galambröptetés, sajtszökőkút, és egy celeb meghívása nélkül akar ünnepelni.$MENYASSZON:$Valami bűzlik$Jön a hideg front$VŐLEGÉNY$Nem ettem meszet.$Feltegyem a téli gumit?;Huzatos Pityu – a közepesen híres mulatós énekes – vokalistákat keres maga mögé, és próbálja kipuhatolni, hogy felkészültek-e erre az életmódra.$VOKALISTA1:$Egyem a szívét, művészúr!$Kiskoromban helyesírási versenyt nyertem.$VOKALISTA2:$Szép az, ami érdek nélkül szép$Leszoktam a dohányzásról;3 akvaristát kérnek fel egy házi piranha elfogására, ami kiugrott az akváriumból.$AKVARISTA1:$Minek nézel engem?$Mutasd!$AKVARISTA2:$Megőrültél?$Majd egyszer.;3 falusi gazdálkodó készül rá, hogyan fogadják a nemsokára odaérkező minisztert, akitől segélyt remélnek.$GAZDÁLKODÓ1:$Nekem mondod?$Jó, de előtte igyunk.$GAZDÁLKODÓ2:$Azt meg minek?$Erről is csak te tehetsz.;3 alagútfúró kiér a hegy másik oldalára, de valószínűleg rossz irányba fúrtak, mert ott nincs senki.$ALAGÚTFÚRÓ1:$És az milyen érzés?$Én előre szóltam$ALAGÚTFÚRÓ2:$Lúdtalppal elég nehéz…$Na gyere, játsszuk le!;Egy házaspár egy hatalmas veszekedés után állnak 10. emeleti lakásuk két ablakában. Öngyilkosok lesznek, ha a kiérkező pszichológus nem tudja őket lebeszélni. A pszichológus próbálja visszahozni őket, de munkáját nehezíti, hogy ezek mindig ugyan azt hajtogatják.$FELESÉG:$Minden szombatunk ugyanúgy telik.$Minden miatta van.$FÉRJ:$De Ja Vu-m van.$Erre még nem készült fel a világ.;Egy ügyvéd a két tanúnak magyarázza, hogyan viselkedjenek majd a tárgyalóteremben. Mire figyeljenek oda, hogy tudnák segíteni a per megnyerését$Tanú 1: $Felőlem le is ülheti$De mire megy ki a játék?$Tanú 2: $Zaklatottnak tűnik majd?$Ki mint vet, úgy arat!;3 barát készül megkerülni a világot a 3 személyes tandemen.$Barát1: $Hol a kezed?$Amikor ezt én csináltam, jó volt!$Barát2: $Nem jók a látási viszonyok!$Ez a tiéd?;Egy rab beletenyerel a börtön frissen festett térképébe, ezért e kezén marad az egész térkép. 2 sorstársával igyekszik kidolgozni a megfelelő tervet, de ez nehezebb mint gondolta$Rab1: $És ha lekapnak?$Figyelni kéne!$Rab2: $Nagyon félek?$Ezt meg egyszer ne!"
+            let sorok = fullszoveg.split(";");
+            var randsor = Math.floor(Math.random() * sorok.length);
+            let szitu = sorok[randsor];
+            let reszek = szitu.split("$");
+            document.getElementById("szituacioszoveg").innerText = reszek[0];
+            document.getElementById("nev1").innerText = reszek[1];
+            document.getElementById("li1").innerText = reszek[2];
+            document.getElementById("li2").innerText = reszek[3];
+            document.getElementById("nev2").innerText = reszek[4];
+            document.getElementById("li3").innerText = reszek[5];
+            document.getElementById("li4").innerText = reszek[6];
+    
+        }
+    
+        
+    
+    </script>
+    
+    <a href="index.html"><input type="button"  value="Főoldal"></a>
+    </html>
+    

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beugró</title>
+ <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+<H1>Beugró: Bekérdező</H2>
+<hr>
+<div class="feladat">
+<p><b>Szabály:</b> a szereplők kérdésre csak kérdéssel válaszolhatnak, így kell tovább építeniük a cselekményt. (NINCS VISSZAKÉRDEZÉS, ÉS SOK GONDOLKODÁSI IDŐ)</p>
+</div>
+<div class="szekcio">
+<input type="button" onclick="szitu()" value="Szituáció">
+<p class="label" id="szituacioszoveg">Példaszöveg</p>
+</div>
+
+</body>
+<script>
+    function szitu() {
+        let fullszoveg="A piacon egy vásárló tudakolja, hogy miért kerül a répa annyiba, amennyibe.;Egy vendéglőben a vendég a pincértől tudakolja, hogy a különböző ételek miből, és hogyan készülnek.;Az irodában arra lesz figyelmes valaki, hogy az asztalszomszédja a táskájában turkál.;Két vadász találkozik a legnagyobb oroszlánnal, amit valaha láttak. Azonban mind a ketten úgy gondolták, majd a másik hoz magával fegyvert.;Valaki a legjobb barátjától egy fiókot kap ajándékba.;Egy embert idegesíti, hogy barátja mindig visszakérdez.;Az eladósodott ember azt kérdezi a kigyúrt-kopasz behajtótól: tud-e részletekben fizetni.;A költöztető cég emberei arról érdeklődnek, hová tegyék le a zongorát.;A ruhatárastól kérdi egy vendég, hogy milyen kabátot javasol a korábbi helyett.;Egy álomszuszék éjjeliőr nem érti, miért akarják kirúgni.;Egy térképészt arról faggat a főnöke, hogy legújabb kiadásukban, miért cserélte fel a kontinenseket.;Egy utcai útonálló megállít egy járókelőt azzal hogy: „pénzt, vagy életet?!”. A járókelő nem érti, miért adná ő oda bármelyiket is.;Szabadulása előtti percekben, egy rabot arról faggat a börtönigazgató, hogy valóban jó útra fog-e térni.;Egy ember bulit tart, de mikor kimegy a konyhába, ott találja az egyik barátját, aki már kizabálta a fél hűtőt.;Munkahelyi étkezdében valaki visszamegy szalvétáért, és mikor vissza ér az asztalához, már más eszi az ebédjét.;Egy film mellékszereplője visszamegy a rendezőhöz, hogy miért vágták ki az összes jelenetét a filmből?;Középkorú házaspár, a nő arról faggatja a férjet, hogy most is ugyanolyan vonzónak látja-e most, mint régen, stb… a férj kitérő kérdésekkel válaszol.;Egy újdonsült kutyatulajdonos visszamegy a kereskedésbe, és arról faggatja az eladót, hogy miért nem szobatiszta a kutyus az első hét után?;Egy szobafestő veszekszik a lakástulajjal, hogy rémes színeket választott, és hogy ezt ő nem hajlandó lefesteni a falra.;Egy portás az iskola bejáratánál nem akarja beengedni a szülőt gyermeke tornazsákjával, amit a csemete otthonfelejtett. A szülő mindenképpen be szeretne jutni, mert tudja, hogy a gyerek igazolatlan órát kap, ha nem tud tornázni."
+        let sorok = fullszoveg.split(";");
+        var randsor = Math.floor(Math.random() * sorok.length);
+        document.getElementById("szituacioszoveg").innerText = sorok[randsor];
+    }
+
+
+
+</script>
+
+<a href="index.html"><input type="button"  value="Főoldal"></a>
+</html>

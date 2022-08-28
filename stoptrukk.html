@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beugró</title>
+ <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+<H1>Beugró: Stop-trükk</H2>
+<hr>
+<div class="feladat">
+<p><b>Szabály:</b>Az alapszituációt eljátszó két játékost bármely másik megállíthatja a „<b>Stop!</b>” szóval, és az adott pillanatban rögzült mozdulattal az egyik színész helyére lépve másikat kezdhet.</p>
+</div>
+<div class="szekcio">
+<input type="button" onclick="szitu()" value="Szituáció">
+<p class="label" id="szituacioszoveg">Példaszöveg</p>
+</div>
+
+</body>
+<script>
+    function szitu() {
+        let fullszoveg="Megálltam segíteni egy embernek, akinek az úttest közepén kiszakadt a táskája, és kiborultak belőle a zöldségek, gyümölcsök.;Focimeccsen csúszott a fű.;Tollaslabdázók nagy szélben.;Bokszoló tanítja a bal egyenest a tanítványának.;Egy külföldi eligazítást kér, de közös nyelv híján, gesztikulálva kapja meg a választ.;Metálzenekar frontembere gyakorolja a színpadi elemeket a dobossal;A lakáj segít öltözködni a grófnak;Ketten egy szúnyog ellen;2 apuka nem tudja összecsukni a babakocsit;Szabó méretet vesz egy öltönyhöz;Két utas ide-oda tántorog egy buszon, amit egy ámokfutó sofőr vezet.;Fényképész igazolványképhez állítja be modellét.;Két balett-táncos egy új lépéssort gyakorol, ami nem megy túl jól.;Két gyerek ugróiskolázik.;Két gyalogos taxit próbál leinteni a forgalomban.;Tetováló művész a megrendelő homlokára próbált tetoválni egy sast."
+        let sorok = fullszoveg.split(";");
+        var randsor = Math.floor(Math.random() * sorok.length);
+        document.getElementById("szituacioszoveg").innerText = sorok[randsor];
+    }
+
+
+
+</script>
+
+<a href="index.html"><input type="button"  value="Főoldal"></a>
+</html>
